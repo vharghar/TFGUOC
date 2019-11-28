@@ -13023,8 +13023,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "<b>START</b>\t\tStarts the engine\n<b>ACC-ON</b>\t\tAccessory and car are
-    running\n<b>OFF</b>\t\t\tSwitches the car off"
+  m_Text: "<b>START</b>\t\tLong-click to start the engine\n<b>ACC-ON</b>\t\tAccessory
+    and car are running\n<b>OFF</b>\t\t\tSwitches the car off"
 --- !u!114 &2375899920371351851
 MonoBehaviour:
   m_ObjectHideFlags: 0

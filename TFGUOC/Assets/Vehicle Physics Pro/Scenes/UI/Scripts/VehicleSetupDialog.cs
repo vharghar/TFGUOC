@@ -207,7 +207,7 @@ public class VehicleSetupDialog : MonoBehaviour,
 		VPVehicleController vehicleController = GetVPVehicleController();
 
 		if (vehicleController != null)
-			vehicleController.clutch.type = value? Engine.ClutchType.TorqueConverterLimited : Engine.ClutchType.DiskFriction;
+			vehicleController.clutch.type = value? Engine.ClutchType.TorqueConverterLimited : Engine.ClutchType.FrictionDisc;
 		}
 
 

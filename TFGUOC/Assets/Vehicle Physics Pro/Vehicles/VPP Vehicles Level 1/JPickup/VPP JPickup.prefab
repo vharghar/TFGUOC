@@ -2060,7 +2060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365244475499506394}
   - component: {fileID: 6641376024995831306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: JPickup collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

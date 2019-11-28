@@ -5,12 +5,20 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float thrust;
-    public Rigidbody rb;
-    public float velocidad;
+  
+    public float velocidad = 100;
+    public float maxAnguloGiro = 30;
+
+   // public Vector3 centroDeMasa = Vector3.zero;
+    public WheelCollider ruedaDelanteraIzquierda;
+    public WheelCollider ruedaDelanteraDerecha;
+
+    private bool ruedaTocaSuelo = false;
+    private float fuerzaMotor = 0;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+    //    GetComponent<Rigidbody>().centroDeMasa = centroDeMasa;
     }
 
     // Update is called once per frame
@@ -22,10 +30,22 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float movimientoH = Input.GetAxis("Horizontal");
-        float movimientoV = Input.GetAxis("Vertical");
-        Vector3 movimiento = new Vector3(movimientoH, 0.0f, movimientoV);
+        fuerzaMotor = Input.GetAxis("Velocidad") * velocidad;
+        if (ruedaTocaSuelo)
+        {
+            ruedaDelanteraIzquierda.motorTorque = fuerzaMotor;
+            ruedaDelanteraDerecha.motorTorque = fuerzaMotor;
+        }
 
-        rb.AddForce(movimiento * velocidad);
+
+        float rotation = Input.GetAxis("Direccion") * maxAnguloGiro;
+
+        ruedaDelanteraIzquierda.steerAngle = rotation;
+        ruedaDelanteraDerecha.steerAngle = rotation;
+
+
+        ruedaDelanteraIzquierda.transform.localEulerAngles = new Vector3(0, rotation, 0);
+        ruedaDelanteraDerecha.transform.localEulerAngles = new Vector3(0, rotation, 0);
+        ruedaTocaSuelo = false;
     }
 }

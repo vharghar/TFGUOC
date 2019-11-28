@@ -1220,6 +1220,8 @@ MonoBehaviour:
   groundPenetration: 0.02
   disableSuspensionMovement: 0
   hideWheelOnDisable: 1
+  localSteeringAxis: 1
+  localSpinAxis: 0
 --- !u!1 &179610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,6 +1608,8 @@ MonoBehaviour:
   groundPenetration: 0.02
   disableSuspensionMovement: 0
   hideWheelOnDisable: 1
+  localSteeringAxis: 1
+  localSpinAxis: 0
 --- !u!1 &179628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,6 +1733,8 @@ MonoBehaviour:
   groundPenetration: 0.02
   disableSuspensionMovement: 0
   hideWheelOnDisable: 1
+  localSteeringAxis: 1
+  localSpinAxis: 0
 --- !u!1 &179634
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,7 +2310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.662773, y: 1.984, z: 44.376877}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 479630}
@@ -2899,6 +2905,8 @@ MonoBehaviour:
   groundPenetration: 0.02
   disableSuspensionMovement: 0
   hideWheelOnDisable: 1
+  localSteeringAxis: 1
+  localSpinAxis: 0
 --- !u!1 &179662
 GameObject:
   m_ObjectHideFlags: 0
