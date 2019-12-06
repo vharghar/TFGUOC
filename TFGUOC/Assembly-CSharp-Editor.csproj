@@ -55,84 +55,90 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBasicMultiChannelPerlinEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBlenderSettingsEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBlendListCameraEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBrainEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineClearShotEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineColliderEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineComposerEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineConfinerEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineExternalCameraEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineFramingTransposerEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineFreeLookEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineGroupComposerEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineHardLockToTargetEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineHardLookAtEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineMixingCameraEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineOrbitalTransposerEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachinePathEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachinePOVEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineScreenComposerGuides.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineSmoothPathEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineStateDrivenCameraEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineTargetGroupEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineTrackedDollyEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineTransposerEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraBaseEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Menus\CinemachineMenu.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\CinemachineBlendDefinitionPropertyDrawer.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\CinemachineTagFieldPropertyDrawer.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\GetSetDrawer.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\LensSettingsPropertyDrawer.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\PropertyDrawers\MinDrawer.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Utility\BaseEditor.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Utility\EmbeddedAssetHelpers.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Utility\SaveDuringPlay.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Utility\ScriptableObjectUtility.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Utility\SerializedPropertyHelper.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Windows\AboutWindow.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Windows\CinemachineColliderPrefs.cs" />
-     <Compile Include="Assets\Cinemachine\Base\Editor\Windows\CinemachineSettings.cs" />
-     <Compile Include="Assets\Cinemachine\PostFX\Editor\CinemachinePostProcessingEditor.cs" />
-     <Compile Include="Assets\Cinemachine\PostFX\Editor\PostFXAutoImport.cs" />
-     <Compile Include="Assets\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
-     <Compile Include="Assets\com\heparo\terrain\toolkit\editor\TerrainToolkitEditor.cs" />
-     <Compile Include="Assets\EasyMainMenu\Scripts\Editor\EMM_AddCanvases.cs" />
-     <Compile Include="Assets\EasyMainMenu\Scripts\Main Menu Scripts\Editor\MainMenuControllerEditor.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\FeatureDescriptor.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\IRenderLoopAdapter.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\MicroSplatBaseFeatures.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\MicroSplatDefines.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\MicroSplatShaderGUI.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\MicroSplatShaderGUI_Compiler.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\MicroSplatShaderGUI_PerTex.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\MicroSplatTerrainEditor.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\MicroSplatTerrainEditor_Baking.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\MicroSplatTerrainEditor_SplatUtilities.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\MicroSplatTerrainEditor_TerrainDesc.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\MicroSplatTerrainEditor_WeightLimiting.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\MicroSplatUtilities.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\SurfaceShaderRenderLoopAdapter.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\TextureArrayConfigEditor.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\TextureArrayEditor.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\Editor\TextureArrayPreprocessor.cs" />
-     <Compile Include="Assets\MicroSplat\Core\Scripts\VegetationStudio\Editor\MicroSplatVegetationStudio.cs" />
-     <Compile Include="Assets\Vehicle Physics Pro\Scenes\UI\Editor\GaugeInspector.cs" />
-     <None Include="Assets\MicroSplat\Core\Scripts\VegetationStudio\Editor\microsplat_func_vsgrassmap.txt" />
-     <None Include="Assets\MicroSplat\Core\Scripts\Editor\Fragments\microsplat_terrain_body.txt" />
-     <None Include="Assets\MicroSplat\Core\Scripts\Editor\Fragments\microsplat_terrain_surface_vertex.txt" />
-     <None Include="Assets\MicroSplat\Core\Scripts\Editor\InternalShaders\HeightFromNormal.shader" />
-     <None Include="Assets\MicroSplat\Core\Scripts\VegetationStudio\Editor\microsplat_func_vsshadowmap.txt" />
-     <None Include="Assets\MicroSplat\Core\Scripts\Editor\Fragments\microsplat_terrain_surface_fragment.txt" />
-     <None Include="Assets\MicroSplat\Core\Scripts\VegetationStudio\Editor\microsplat_properties_vsshadowmap.txt" />
-     <None Include="Assets\MicroSplat\Core\Scripts\VegetationStudio\Editor\microsplat_properties_vsgrassmap.txt" />
-     <None Include="Assets\MicroSplat\Core\Scripts\Editor\InternalShaders\NormalSAOFromDiffuse.shader" />
-     <None Include="Assets\MicroSplat\Core\Scripts\Editor\Fragments\microsplat_shared.txt" />
-     <None Include="Assets\MicroSplat\Core\Scripts\Editor\InternalShaders\NormalSAOFromHeight.shader" />
-     <None Include="Assets\MicroSplat\Core\Scripts\Editor\Fragments\microsplat_properties_splat.txt" />
-     <None Include="Assets\MicroSplat\Core\Scripts\Editor\InternalShaders\NormalSAOFromNormal.shader" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineBasicMultiChannelPerlinEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineBlenderSettingsEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineBlendListCameraEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineBrainEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineClearShotEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineColliderEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineComposerEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineConfinerEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineExternalCameraEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineFramingTransposerEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineFreeLookEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineGroupComposerEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineHardLockToTargetEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineHardLookAtEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineMixingCameraEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineOrbitalTransposerEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachinePathEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachinePOVEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineScreenComposerGuides.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineSmoothPathEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineStateDrivenCameraEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineTargetGroupEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineTrackedDollyEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineTransposerEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraBaseEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Menus\CinemachineMenu.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\PropertyDrawers\CinemachineBlendDefinitionPropertyDrawer.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\PropertyDrawers\CinemachineTagFieldPropertyDrawer.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\PropertyDrawers\GetSetDrawer.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\PropertyDrawers\LensSettingsPropertyDrawer.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\PropertyDrawers\MinDrawer.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Utility\BaseEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Utility\EmbeddedAssetHelpers.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Utility\SaveDuringPlay.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Utility\ScriptableObjectUtility.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Utility\SerializedPropertyHelper.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Windows\AboutWindow.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Windows\CinemachineColliderPrefs.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Base\Editor\Windows\CinemachineSettings.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\PostFX\Editor\CinemachinePostProcessingEditor.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\PostFX\Editor\PostFXAutoImport.cs" />
+     <Compile Include="Assets\Externos\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
+     <Compile Include="Assets\Externos\com\heparo\terrain\toolkit\editor\TerrainToolkitEditor.cs" />
+     <Compile Include="Assets\Externos\EasyMainMenu\Scripts\Editor\EMM_AddCanvases.cs" />
+     <Compile Include="Assets\Externos\EasyMainMenu\Scripts\Main Menu Scripts\Editor\MainMenuControllerEditor.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\FeatureDescriptor.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\IRenderLoopAdapter.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\MicroSplatBaseFeatures.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\MicroSplatDefines.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\MicroSplatShaderGUI.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\MicroSplatShaderGUI_Compiler.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\MicroSplatShaderGUI_PerTex.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\MicroSplatTerrainEditor.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\MicroSplatTerrainEditor_Baking.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\MicroSplatTerrainEditor_SplatUtilities.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\MicroSplatTerrainEditor_TerrainDesc.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\MicroSplatTerrainEditor_WeightLimiting.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\MicroSplatUtilities.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\SurfaceShaderRenderLoopAdapter.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\TextureArrayConfigEditor.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\TextureArrayEditor.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\TextureArrayPreprocessor.cs" />
+     <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\VegetationStudio\Editor\MicroSplatVegetationStudio.cs" />
+     <Compile Include="Assets\Externos\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <Compile Include="Assets\Externos\Standard Assets\Editor\Water\Water4\GerstnerDisplaceEditor.cs" />
+     <Compile Include="Assets\Externos\Standard Assets\Editor\Water\Water4\PlanarReflectionEditor.cs" />
+     <Compile Include="Assets\Externos\Standard Assets\Editor\Water\Water4\SpecularLightingEditor.cs" />
+     <Compile Include="Assets\Externos\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
+     <Compile Include="Assets\Externos\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
+     <Compile Include="Assets\Externos\Vehicle Physics Pro\Scenes\UI\Editor\GaugeInspector.cs" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\VegetationStudio\Editor\microsplat_func_vsgrassmap.txt" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\Fragments\microsplat_terrain_body.txt" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\Fragments\microsplat_terrain_surface_vertex.txt" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\InternalShaders\HeightFromNormal.shader" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\VegetationStudio\Editor\microsplat_func_vsshadowmap.txt" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\Fragments\microsplat_terrain_surface_fragment.txt" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\VegetationStudio\Editor\microsplat_properties_vsshadowmap.txt" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\VegetationStudio\Editor\microsplat_properties_vsgrassmap.txt" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\InternalShaders\NormalSAOFromDiffuse.shader" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\Fragments\microsplat_shared.txt" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\InternalShaders\NormalSAOFromHeight.shader" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\Fragments\microsplat_properties_splat.txt" />
+     <None Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\InternalShaders\NormalSAOFromNormal.shader" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
@@ -389,10 +395,10 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="VehiclePhysics">
- <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Assets/Vehicle Physics Pro/Sdk/VehiclePhysics.dll</HintPath>
+ <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Assets/Externos/Vehicle Physics Pro/Sdk/VehiclePhysics.dll</HintPath>
  </Reference>
  <Reference Include="VehiclePhysics_Editor">
- <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Assets/Vehicle Physics Pro/Sdk/Editor/VehiclePhysics_Editor.dll</HintPath>
+ <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Assets/Externos/Vehicle Physics Pro/Sdk/Editor/VehiclePhysics_Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -768,17 +774,9 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{1205B7C5-F84F-3DA3-95AE-C2756BFB0433}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{3B96523D-973D-267D-AD76-8E15A459CFA4}</Project>
       <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{6FC64BBB-4E25-C6AB-B53B-994D66F84007}</Project>
-      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

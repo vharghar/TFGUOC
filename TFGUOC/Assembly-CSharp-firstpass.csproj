@@ -418,9 +418,6 @@
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
- <Reference Include="VehiclePhysics">
- <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Assets/Vehicle Physics Pro/Sdk/VehiclePhysics.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
@@ -429,6 +426,9 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ </Reference>
+ <Reference Include="VehiclePhysics">
+ <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Assets/Externos/Vehicle Physics Pro/Sdk/VehiclePhysics.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

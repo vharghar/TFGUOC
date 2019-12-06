@@ -316,12 +316,6 @@
  <Reference Include="UnityEditor.UWP.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="VehiclePhysics">
- <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Assets/Vehicle Physics Pro/Sdk/VehiclePhysics.dll</HintPath>
- </Reference>
- <Reference Include="VehiclePhysics_Editor">
- <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Assets/Vehicle Physics Pro/Sdk/Editor/VehiclePhysics_Editor.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -336,6 +330,12 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="VehiclePhysics_Editor">
+ <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Assets/Externos/Vehicle Physics Pro/Sdk/Editor/VehiclePhysics_Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="VehiclePhysics">
+ <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Assets/Externos/Vehicle Physics Pro/Sdk/VehiclePhysics.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
