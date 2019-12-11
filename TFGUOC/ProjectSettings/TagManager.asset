@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PuntoDeControl
   - Velocimetro
+  - carroceria
   layers:
   - Default
   - TransparentFX

@@ -22,7 +22,12 @@ public class ControlCheckpoint : MonoBehaviour
         {
             controlAct = CheckpointActivo.GetActiveCheckPoint();
             RestaurarCoche.ActualizarControlActivo(controlAct);
+            Debug.Log("control checkpoint -- " + controlAct);
         }
+        else {
+            Debug.Log("control checkpoint -- " + collision.gameObject.tag);
+        }
+
     }
 
 

@@ -116,6 +116,10 @@
      <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\MicroSplatRuntimeUtil.cs" />
      <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\MicroSplatTerrain.cs" />
      <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\TextureArrayConfig.cs" />
+     <Compile Include="Assets\Externos\Pause Menu Assets\Scripts\Pausemenu\PauseManager.cs" />
+     <Compile Include="Assets\Externos\Pause Menu Assets\Scripts\Pausemenu\SaveSettings.cs" />
+     <Compile Include="Assets\Externos\Pause Menu Assets\Scripts\Utlities\CoroutineUtlities.cs" />
+     <Compile Include="Assets\Externos\Pause Menu Assets\Scripts\Utlities\Rotate.cs" />
      <Compile Include="Assets\Externos\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\Externos\SampleScenes\Menu\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Externos\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -251,6 +255,7 @@
      <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
      <Compile Include="Assets\Scripts\ApplicationManager.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\CargarMejorTiempo.cs" />
      <Compile Include="Assets\Scripts\ChangeColor.cs" />
      <Compile Include="Assets\Scripts\CheckpointActivo.cs" />
      <Compile Include="Assets\Scripts\ControlCheckpoint.cs" />
@@ -262,6 +267,8 @@
      <Compile Include="Assets\Scripts\DropMe.cs" />
      <Compile Include="Assets\Scripts\GestionAudio.cs" />
      <Compile Include="Assets\Scripts\Gyroscopio.cs" />
+     <Compile Include="Assets\Scripts\LapControl.cs" />
+     <Compile Include="Assets\Scripts\LapTimeManager.cs" />
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\MenuPausa.cs" />
      <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
@@ -276,9 +283,11 @@
      <Compile Include="Assets\Scripts\TextPrueva.cs" />
      <Compile Include="Assets\Scripts\TiltWindow.cs" />
      <Compile Include="Assets\Scripts\Velocimetro.cs" />
+     <Compile Include="Assets\Scripts\VueltaCompleta.cs" />
      <Compile Include="Assets\Speedometer\Speedometer.cs" />
      <None Include="Assets\Externos\Vehicle Physics Pro\Sample Assets\Locations\! Locations.txt" />
      <None Include="Assets\Externos\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
+     <None Include="Assets\Externos\Pause Menu Assets\Fonts\open-sans\Apache License.txt" />
      <None Include="Assets\Externos\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\Externos\MicroSplat\Core\Examples\Scene\MicroSplatData\MicroSplat_Base.shader" />
      <None Include="Assets\Externos\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
@@ -309,6 +318,7 @@
      <None Include="Assets\Externos\Vehicle Physics Pro\Sdk\VehiclePhysics.txt" />
      <None Include="Assets\Externos\Materials\UI-Default-No-Alpha.shader" />
      <None Include="Assets\Externos\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
+     <None Include="Assets\Externos\Pause Menu Assets\Fonts\exo\SIL Open Font License.txt" />
      <None Include="Assets\Externos\Vehicle Physics Pro\Sample Assets\Art\Fonts\_Readme.txt" />
      <None Include="Assets\Externos\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\Externos\Standard Assets\Vehicles\Car\CarGuidelines.txt" />
@@ -321,6 +331,7 @@
      <None Include="Assets\Externos\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Externos\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
      <None Include="Assets\Externos\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+     <None Include="Assets\Externos\SkySerie Freebie\Hdri setup.txt" />
      <None Include="Assets\Externos\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
      <None Include="Assets\Externos\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
      <None Include="Assets\Externos\MicroSplat\Core\Scripts\MicroSplatAddPass.shader" />
