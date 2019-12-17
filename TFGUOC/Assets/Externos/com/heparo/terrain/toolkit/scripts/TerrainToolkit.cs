@@ -58,8 +58,9 @@
 /*---------------------------------------------------------------------------*/
 
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
-
+#endif
 using System;
 using System.IO;
 using System.Collections;
@@ -1927,9 +1928,10 @@ public class TerrainToolkit : MonoBehaviour {
 	
 	public void addTerrainLayer(Texture2D tex, int index){
 		
+		#if UNITY_EDITOR
 		// try{
 			
-			if( terrainLayers==null ){ terrainLayers = new TerrainLayer[0];	}
+		if( terrainLayers==null ){ terrainLayers = new TerrainLayer[0];	}
 		
 		// Build paths
 		BuildPaths();
@@ -1975,6 +1977,7 @@ public class TerrainToolkit : MonoBehaviour {
 			// Debug.LogError("addTerrainLayer error : "+e);
 		// }
 			
+		#endif
 	}
 	
 /*---------------------------------------------------------------------------*/
@@ -1983,6 +1986,7 @@ public class TerrainToolkit : MonoBehaviour {
 	
 	public void deleteTerrainLayer(Texture2D tex, int index){
 		
+		#if UNITY_EDITOR
 		// try{
 			
 		if( terrainLayers==null ){ terrainLayers = new TerrainLayer[0];	}
@@ -2044,6 +2048,7 @@ public class TerrainToolkit : MonoBehaviour {
 			// Debug.LogError("addTerrainLayer error : "+e);
 		// }
 		
+		#endif
 	}
 	
 /*---------------------------------------------------------------------------*/
@@ -2052,6 +2057,7 @@ public class TerrainToolkit : MonoBehaviour {
 	
 	public void deleteAllTerrainLayers(){
 		
+		#if UNITY_EDITOR
 		// try{
 			
 		if( terrainLayers==null ){ terrainLayers = new TerrainLayer[0];	}
@@ -2073,6 +2079,7 @@ public class TerrainToolkit : MonoBehaviour {
 			// Debug.LogError("addTerrainLayer error : "+e);
 		// }
 		
+		#endif
 	}
 	
 /*---------------------------------------------------------------------------*/

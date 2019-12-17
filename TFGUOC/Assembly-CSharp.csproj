@@ -252,6 +252,7 @@
      <Compile Include="Assets\Externos\Vehicle Physics Pro\Scenes\UI\Scripts\TelemetryChartToolbar.cs" />
      <Compile Include="Assets\Externos\Vehicle Physics Pro\Scenes\UI\Scripts\VehicleSetupDialog.cs" />
      <Compile Include="Assets\scrip.cs" />
+     <Compile Include="Assets\Scripts\ActivarCoche.cs" />
      <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
      <Compile Include="Assets\Scripts\ApplicationManager.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
@@ -265,6 +266,7 @@
      <Compile Include="Assets\Scripts\DragMe.cs" />
      <Compile Include="Assets\Scripts\DragPanel.cs" />
      <Compile Include="Assets\Scripts\DropMe.cs" />
+     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
      <Compile Include="Assets\Scripts\GestionAudio.cs" />
      <Compile Include="Assets\Scripts\Gyroscopio.cs" />
      <Compile Include="Assets\Scripts\LapControl.cs" />
@@ -273,12 +275,14 @@
      <Compile Include="Assets\Scripts\MenuPausa.cs" />
      <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
      <Compile Include="Assets\Scripts\mostraFPS.cs" />
+     <Compile Include="Assets\Scripts\MostrarControles.cs" />
      <Compile Include="Assets\Scripts\MostrarVelocidad.cs" />
      <Compile Include="Assets\Scripts\PanelManager.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\ResizePanel.cs" />
      <Compile Include="Assets\Scripts\RestaurarCoche.cs" />
      <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
+     <Compile Include="Assets\Scripts\SetCuentaAtras.cs" />
      <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
      <Compile Include="Assets\Scripts\TextPrueva.cs" />
      <Compile Include="Assets\Scripts\TiltWindow.cs" />

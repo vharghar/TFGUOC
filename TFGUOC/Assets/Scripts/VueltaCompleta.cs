@@ -24,9 +24,10 @@ public class VueltaCompleta : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       mejorMinuto = PlayerPrefs.GetInt("MejorMinuto00Save");
-       mejorSegundo = PlayerPrefs.GetInt("MejorSegundo00Save");
-       mejorMilesima = PlayerPrefs.GetFloat("MejorMilesima00Save");
+        CargarMejorTiempo();
+
+
+       
     }
 
     // Update is called once per frame
@@ -41,15 +42,17 @@ public class VueltaCompleta : MonoBehaviour
         float actMilesimas = LapTimeManager.ContaMilesimas;
 
 
-        if (mejorMinuto == 0 && mejorSegundo == 0 && mejorMilesima == 0.0f)
+        if (mejorMinuto == 0 && mejorSegundo == 0 && mejorMilesima == 0f)
         {
             ActualizarTextos();
+            AlmacenarMejorTiempo();
         }
         else
         {
             if (actMinutos < mejorMinuto)
             {
                 ActualizarTextos();
+                AlmacenarMejorTiempo();
             }
             else
             {
@@ -58,6 +61,7 @@ public class VueltaCompleta : MonoBehaviour
                     if (actSegundos < mejorSegundo)
                     {
                         ActualizarTextos();
+                        AlmacenarMejorTiempo();
                     }
                     else
                     {
@@ -66,6 +70,7 @@ public class VueltaCompleta : MonoBehaviour
                             if (actMilesimas < mejorMilesima)
                             {
                                 ActualizarTextos();
+                                AlmacenarMejorTiempo();
                             }
                         }
                     }
@@ -74,6 +79,7 @@ public class VueltaCompleta : MonoBehaviour
             }
         }
 
+        CargarMejorTiempo();
         ReiniciarReloj();
 
         VueltaCompletaTrig.SetActive(false);
@@ -101,7 +107,16 @@ public class VueltaCompleta : MonoBehaviour
         {
             MinutosBest.GetComponent<Text>().text = "" + LapTimeManager.ContaMinutos + ":";
         }
-        MilesimasBest.GetComponent<Text>().text = "" + LapTimeManager.ContaMilesimas;
+        
+        MilesimasBest.GetComponent<Text>().text = "" + LapTimeManager.ContaMilesimas.ToString("F0");
+        
+
+
+       
+
+    }
+    void AlmacenarMejorTiempo()
+    {
         mejorMinuto = LapTimeManager.ContaMinutos;
         mejorSegundo = LapTimeManager.ContaSegundos;
         mejorMilesima = LapTimeManager.ContaMilesimas;
@@ -109,13 +124,45 @@ public class VueltaCompleta : MonoBehaviour
         PlayerPrefs.SetInt("MejorMinuto00Save", mejorMinuto);
         PlayerPrefs.SetInt("MejorSegundo00Save", mejorSegundo);
         PlayerPrefs.SetFloat("MejorMilesima00Save", mejorMilesima);
-
     }
-       
     void ReiniciarReloj()
     {
         LapTimeManager.ContaMinutos = 0;
         LapTimeManager.ContaSegundos = 0;
         LapTimeManager.ContaMilesimas = 0;
+
+        
     }
+
+    void CargarMejorTiempo()
+    {
+        mejorMinuto = PlayerPrefs.GetInt("MejorMinuto00Save");
+        mejorSegundo = PlayerPrefs.GetInt("MejorSegundo00Save");
+        mejorMilesima = PlayerPrefs.GetFloat("MejorMilesima00Save");
+
+        if (mejorSegundo <= 9)
+        {
+            SegundosBest.GetComponent<Text>().text = "0" + mejorSegundo + ".";
+        }
+        else
+        {
+            SegundosBest.GetComponent<Text>().text = "" + mejorSegundo + ".";
+        }
+
+        if (mejorMinuto <= 9)
+        {
+            MinutosBest.GetComponent<Text>().text = "0" + mejorMinuto + ":";
+
+        }
+        else
+        {
+            MinutosBest.GetComponent<Text>().text = "" + mejorMinuto + ":";
+        }
+        MilesimasBest.GetComponent<Text>().text = "" + mejorMilesima.ToString("F0");
+
+    }
+
+   
+
+    
 }

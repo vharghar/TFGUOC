@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class MenuPausa : MonoBehaviour
 {
@@ -52,10 +54,15 @@ public class MenuPausa : MonoBehaviour
         menuPausaUI.SetActive(true);
         
         
+        
     }
     public void Continuar()
     {
         menuPausaUI.SetActive(false);
+        optionsUI.SetActive(false);
+        audioUI.SetActive(false);
+        graficsUI.SetActive(false);
+        exitUI.SetActive(false);
         Time.timeScale = 1f;
         JuegoEnPausa = false;
         //player.SetActive (true);

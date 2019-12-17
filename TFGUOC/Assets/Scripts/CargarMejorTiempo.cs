@@ -18,11 +18,12 @@ public class CargarMejorTiempo : MonoBehaviour
     }
 
     // Update is called once per frame
-    void cargarMT()
+    public void cargarMT()
     {
         int mejorMinuto = PlayerPrefs.GetInt("MejorMinuto00Save");
         int mejorSegundo = PlayerPrefs.GetInt("MejorSegundo00Save");
         float mejorMilesima = PlayerPrefs.GetFloat("MejorMilesima00Save");
+
         if (mejorSegundo <= 9)
         {
             SegundosBest.GetComponent<Text>().text = "0" + mejorSegundo + ".";
@@ -41,7 +42,7 @@ public class CargarMejorTiempo : MonoBehaviour
         {
             MinutosBest.GetComponent<Text>().text = "" + mejorMinuto + ":";
         }
-        MilesimasBest.GetComponent<Text>().text = "" + mejorMilesima;
+        MilesimasBest.GetComponent<Text>().text = "" + mejorMilesima.ToString("F0") ;
     }
  
 }
