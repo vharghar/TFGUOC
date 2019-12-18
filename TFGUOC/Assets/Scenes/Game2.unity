@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -113.8, y: 76.9}
+  m_AnchoredPosition: {x: -90.7, y: 76.9}
   m_SizeDelta: {x: 146, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1416155
@@ -1142,7 +1142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coche: {fileID: 1240581361}
-  vpcoche: {fileID: 0}
 --- !u!1 &167797816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,8 +1360,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37.5, y: -187.10016}
-  m_SizeDelta: {x: 146, y: 110}
+  m_AnchoredPosition: {x: 20.9, y: -187.10016}
+  m_SizeDelta: {x: 180, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &194834477
 MonoBehaviour:
@@ -1395,7 +1394,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 00.
+  m_Text: '*00.'
 --- !u!222 &194834478
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5300,7 +5299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 176.7, y: -187.1}
+  m_AnchoredPosition: {x: 188.6, y: -187.1}
   m_SizeDelta: {x: 146, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &615687621
@@ -5328,7 +5327,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 118
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -6453,6 +6452,11 @@ PrefabInstance:
       propertyPath: drags.scratchAudioClip
       value: 
       objectReference: {fileID: 8300000, guid: b75c88da945e230429739740c8b1f102, type: 3}
+    - target: {fileID: 114462316325742096, guid: 0ba239054da355345bc3be88be60af08,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 82759282954298594, guid: 0ba239054da355345bc3be88be60af08,
         type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -7853,7 +7857,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 118
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -8033,8 +8037,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -113.8, y: -187.10016}
-  m_SizeDelta: {x: 146, y: 110}
+  m_AnchoredPosition: {x: -165.7, y: -187.10016}
+  m_SizeDelta: {x: 180, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &981847344
 MonoBehaviour:
@@ -8067,7 +8071,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '00:'
+  m_Text: '*00:'
 --- !u!222 &981847345
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11950,8 +11954,14 @@ MonoBehaviour:
   VueltaCompletaTrig: {fileID: 1378139929}
   CP_1: {fileID: 1276813846}
   MinutosBest: {fileID: 981847342}
-  SegundosBest: {fileID: 1635540650}
+  SegundosBest: {fileID: 194834475}
   MilesimasBest: {fileID: 615687619}
+  actMinutos: 0
+  actSegundos: 0
+  actMilesimas: 0
+  mejorMinuto: 0
+  mejorSegundo: 0
+  mejorMilesima: 0
 --- !u!65 &1378139933
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,9 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ActivarCoche
     - CargarMejorTiempo
     - CheckpointActivo
     - ControlCheckpoint
+    - GameManagerScript
     - GestionAudio
     - Gyroscopio
     - JBooth.MicroSplat.TextureArrayConfig
@@ -16,6 +18,7 @@ ScriptsOnlyBuild:
     - MostrarControles
     - MostrarVelocidad
     - RestaurarCoche
+    - SetCuentaAtras
     - Velocimetro
     - VueltaCompleta
     - com.heparo.terrain.toolkit.TerrainToolkit
@@ -28,6 +31,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
@@ -52,6 +56,7 @@ ScriptsOnlyBuild:
     - VehiclePhysics.VPVisualEffects
     - VehiclePhysics.VPWheelCollider
     com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/Game2.unity:
@@ -81,6 +86,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -90,6 +97,8 @@ ScriptsOnlyBuild:
     - Class: 89
       Script: {instanceID: 0}
     - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
       Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
@@ -156,13 +165,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12186}
     - Class: 114
-      Script: {instanceID: 12378}
+      Script: {instanceID: 12240}
     - Class: 114
-      Script: {instanceID: 12482}
+      Script: {instanceID: 12242}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12252}
     - Class: 114
-      Script: {instanceID: 12704}
+      Script: {instanceID: 12384}
+    - Class: 114
+      Script: {instanceID: 12488}
+    - Class: 114
+      Script: {instanceID: 12664}
+    - Class: 114
+      Script: {instanceID: 12710}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -281,13 +296,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12186}
     - Class: 114
-      Script: {instanceID: 12378}
+      Script: {instanceID: 12384}
     - Class: 114
-      Script: {instanceID: 12598}
+      Script: {instanceID: 12604}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12664}
     - Class: 114
-      Script: {instanceID: 12704}
+      Script: {instanceID: 12710}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -589,18 +604,6 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkTransform
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements
-    className: CallbackExecutor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements.Editor
-    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 357dc9516c87a9d2caf5c0f50c455e56
@@ -1011,7 +1014,7 @@ ScriptsOnlyBuild:
     className: CinemachineOrbitalTransposer
   - hash:
       serializedVersion: 2
-      Hash: dd89f1cb1b4bb237a93c99da79c2969b
+      Hash: 739330cb06b1d93e047e2a68dc3853aa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VueltaCompleta
@@ -1425,7 +1428,7 @@ ScriptsOnlyBuild:
     className: CinemachineMixingCamera
   - hash:
       serializedVersion: 2
-      Hash: 02f1febc7453edd9ce00b70cb14c7b6a
+      Hash: 6144ec0ed2c11a8dadec34dd3dc73417
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MostrarControles
@@ -1953,6 +1956,24 @@ ScriptsOnlyBuild:
     className: Ball
   - hash:
       serializedVersion: 2
+      Hash: aba52356e1f3861dc9fc0843e0adf354
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManagerScript
+  - hash:
+      serializedVersion: 2
+      Hash: a2ac9b975a9f83b26b932e98f7373d8c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ActivarCoche
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SetCuentaAtras
+  - hash:
+      serializedVersion: 2
       Hash: a8cd58c1680eb5251e5604e560cf89e9
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.Utility
@@ -2255,4 +2276,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/Game2.unity
-  playerPath: F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Juego/TFGUOC.exe
+  playerPath: F:/grau multimedia/TFG/tfg-github/TFGUOC/TFGUOC/Juego/4x4 Land.exe

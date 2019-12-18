@@ -61,13 +61,13 @@ public class CheckpointActivo : MonoBehaviour
                 consejo = "Prueva 2 Zigzag:\n Procuran mantenerse en el centro del paso, controlar la inclinacion del vehiculo para evitar volcar";
                 break;
             case "BachesCP":
-                consejo = "Prueva 3 Baches: \n Mantener una velocidad constante reducida, intentar mantener las ruedas en contacto con el suelo";
+                consejo = "Prueva 3 Baches: \n Mantener una velocidad constante reducida, intentar mantener las ruedas en contacto con el suelo, en caso de atasco retroceder y volver a avanzar";
                 break;
             case "EscalerasCP":
-                consejo = "Prueva 4 Escaleras: \n Reducir la velocidad y avanzar con decision, evitando la perpendicular con la escalera, recomendable un poco de inclinacion";
+                consejo = "Prueva 4 Escaleras: \n Reducir la velocidad y avanzar con decision, evitando la perpendicular con la escalera, recomendable afrontar la escalera un poco de lado de forma que cada rueda contacte con un escalon diferente";
                 break;
             case "GrietasCP":
-                consejo = "Prueva 5 Grietas: \n Velocidad reducida afrontar las grietas en diagonal para evitar que las dos ruedas entren a la vez en la grieta";
+                consejo = "Prueva 5 Grietas: \n Velocidad reducida, afrontar las grietas en diagonal para evitar que las dos ruedas entren a la vez en la grieta";
                 break;
                 //  default:
                 //    numeroCP = 0;
@@ -98,6 +98,7 @@ public class CheckpointActivo : MonoBehaviour
         }
 
         puntoSiguienteSiguiente = puntoActivoSiguiente + 1;
+
         if (puntoSiguienteSiguiente >= longitudLista) {
             puntoSiguienteSiguiente = 0;
         }
@@ -216,7 +217,7 @@ public class CheckpointActivo : MonoBehaviour
                 }
             }
         }
-        //Debug.Log("GetActiveCheckPoint -- " + numeroCP);
+        Debug.Log("GetActiveCheckPoint -- " + numeroCP);
         return numeroCP;
     }
 }

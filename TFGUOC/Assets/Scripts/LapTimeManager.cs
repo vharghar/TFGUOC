@@ -15,11 +15,7 @@ public class LapTimeManager : MonoBehaviour
     public GameObject MilesimasGO;
 
     private GameManagerScript GMS;
-
     
-        
-
-
         // Start is called before the first frame update
         void Start()
     {
@@ -38,38 +34,23 @@ public class LapTimeManager : MonoBehaviour
         if (GMS.cuentaAtrasAcabada) 
         { 
             ContaMilesimas += Time.deltaTime * 10;
-            PantallaMili = ContaMilesimas.ToString("F0");
-            MilesimasGO.GetComponent<Text>().text = "" + PantallaMili;
-
             if (ContaMilesimas >= 10)
             {
                 ContaMilesimas = 0;
                 ContaSegundos += 1;
-
             }
-            if (ContaSegundos <= 9)
-            {
-                SegundosGO.GetComponent<Text>().text = "0" + ContaSegundos + ".";
-
-            }
-            else
-            {
-                SegundosGO.GetComponent<Text>().text = "" + ContaSegundos + ".";
-            }
+            
             if (ContaSegundos >= 60)
             {
                 ContaSegundos = 0;
                 ContaMinutos += 1;
             }
-            if (ContaMinutos <= 9)
-            {
-                MinutosGO.GetComponent<Text>().text = "0" + ContaMinutos + ":";
 
-            }
-            else
-            {
-                MinutosGO.GetComponent<Text>().text = "" + ContaMinutos + ":";
-            }
+            MilesimasGO.GetComponent<Text>().text = ContaMilesimas.ToString("F0");
+            SegundosGO.GetComponent<Text>().text = ContaSegundos.ToString("00") + ".";
+            MinutosGO.GetComponent<Text>().text = ContaMinutos.ToString("00") + ":";
+
+           
         }
 
     }

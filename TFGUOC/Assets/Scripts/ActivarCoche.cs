@@ -6,12 +6,11 @@ using VehiclePhysics;
 public class ActivarCoche : MonoBehaviour
 {
     public GameObject coche;
-    public VehicleBase vpcoche;
     private GameManagerScript GMS;
     // Start is called before the first frame update
     void Start()
     {
-        
+        coche.SetActive(false);
     }
 
     // Update is called once per frame

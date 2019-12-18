@@ -24,25 +24,12 @@ public class CargarMejorTiempo : MonoBehaviour
         int mejorSegundo = PlayerPrefs.GetInt("MejorSegundo00Save");
         float mejorMilesima = PlayerPrefs.GetFloat("MejorMilesima00Save");
 
-        if (mejorSegundo <= 9)
-        {
-            SegundosBest.GetComponent<Text>().text = "0" + mejorSegundo + ".";
-        }
-        else
-        {
-            SegundosBest.GetComponent<Text>().text = "" + mejorSegundo + ".";
-        }
 
-        if (mejorMinuto <= 9)
-        {
-            MinutosBest.GetComponent<Text>().text = "0" + mejorMinuto + ":";
+        MinutosBest.GetComponent<Text>().text = mejorMinuto.ToString("00") + ":";
+        SegundosBest.GetComponent<Text>().text = mejorSegundo.ToString("00") + ".";
+        MilesimasBest.GetComponent<Text>().text = mejorMilesima.ToString("F0");
 
-        }
-        else
-        {
-            MinutosBest.GetComponent<Text>().text = "" + mejorMinuto + ":";
-        }
-        MilesimasBest.GetComponent<Text>().text = "" + mejorMilesima.ToString("F0") ;
+        Debug.Log("Carga Mejor Tiempo -- " + mejorMinuto + ":" + mejorSegundo + "." + mejorMilesima);
     }
  
 }

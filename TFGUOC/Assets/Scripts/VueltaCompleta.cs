@@ -11,20 +11,22 @@ public class VueltaCompleta : MonoBehaviour
     //public GameObject CP_3;
     //  public GameObject CP_4;
   
-
-
     public  GameObject MinutosBest;
     public  GameObject SegundosBest;
     public  GameObject MilesimasBest;
-    
-      int mejorMinuto;
-      int mejorSegundo;
-      float mejorMilesima;
+
+    public int actMinutos;
+    public int actSegundos;
+    public float actMilesimas;
+
+    public int mejorMinuto;
+    public int mejorSegundo;
+    public float mejorMilesima;
 
     // Start is called before the first frame update
     void Start()
     {
-        CargarMejorTiempo();
+       // CargarMejorTiempo();
 
 
        
@@ -37,22 +39,28 @@ public class VueltaCompleta : MonoBehaviour
     }
     void OnTriggerEnter()
     {
-        int actMinutos = LapTimeManager.ContaMinutos;
-        int actSegundos = LapTimeManager.ContaSegundos;
-        float actMilesimas = LapTimeManager.ContaMilesimas;
+        mejorMinuto = PlayerPrefs.GetInt("MejorMinuto00Save");
+        mejorSegundo = PlayerPrefs.GetInt("MejorSegundo00Save");
+        mejorMilesima = PlayerPrefs.GetFloat("MejorMilesima00Save");
+
+        actMinutos = LapTimeManager.ContaMinutos;
+        actSegundos = LapTimeManager.ContaSegundos;
+        actMilesimas = LapTimeManager.ContaMilesimas;
 
 
         if (mejorMinuto == 0 && mejorSegundo == 0 && mejorMilesima == 0f)
         {
+           
+            Debug.Log("todo -- " + actMinutos + ":" + actSegundos + "." + actMilesimas);
             ActualizarTextos();
-            AlmacenarMejorTiempo();
         }
         else
         {
             if (actMinutos < mejorMinuto)
             {
+                
+                Debug.Log("minuto -- " + actMinutos + ":" + actSegundos + "." + actMilesimas);
                 ActualizarTextos();
-                AlmacenarMejorTiempo();
             }
             else
             {
@@ -60,8 +68,9 @@ public class VueltaCompleta : MonoBehaviour
                 {
                     if (actSegundos < mejorSegundo)
                     {
+                        
+                        Debug.Log("segundo -- " + actMinutos + ":" + actSegundos + "." + actMilesimas);
                         ActualizarTextos();
-                        AlmacenarMejorTiempo();
                     }
                     else
                     {
@@ -69,8 +78,9 @@ public class VueltaCompleta : MonoBehaviour
                         {
                             if (actMilesimas < mejorMilesima)
                             {
+                                
+                                Debug.Log("milesima -- " + actMinutos + ":" + actSegundos + "." + actMilesimas);
                                 ActualizarTextos();
-                                AlmacenarMejorTiempo();
                             }
                         }
                     }
@@ -79,7 +89,7 @@ public class VueltaCompleta : MonoBehaviour
             }
         }
 
-        CargarMejorTiempo();
+        //CargarMejorTiempo();
         ReiniciarReloj();
 
         VueltaCompletaTrig.SetActive(false);
@@ -89,37 +99,29 @@ public class VueltaCompleta : MonoBehaviour
 
     void ActualizarTextos()
     {
-        if (LapTimeManager.ContaSegundos <= 9)
-        {
-            SegundosBest.GetComponent<Text>().text = "0" + LapTimeManager.ContaSegundos + ".";
-        }
-        else
-        {
-            SegundosBest.GetComponent<Text>().text = "" + LapTimeManager.ContaSegundos + ".";
-        }
-
-        if (LapTimeManager.ContaMinutos <= 9)
-        {
-            MinutosBest.GetComponent<Text>().text = "0" + LapTimeManager.ContaMinutos + ":";
-
-        }
-        else
-        {
-            MinutosBest.GetComponent<Text>().text = "" + LapTimeManager.ContaMinutos + ":";
-        }
-        
-        MilesimasBest.GetComponent<Text>().text = "" + LapTimeManager.ContaMilesimas.ToString("F0");
-        
-
-
+        MilesimasBest.GetComponent<Text>().text = actMilesimas.ToString("F0"); 
+        SegundosBest.GetComponent<Text>().text = actSegundos.ToString("00") + ".";
+        MinutosBest.GetComponent<Text>().text = actMinutos.ToString("00") + ":";
        
+       
+        // AlmacenarMejorTiempo();
+      /*
+        mejorMinuto = actMinutos;
+        mejorSegundo = actSegundos;
+        mejorMilesima = actMilesimas;
+*/
+        PlayerPrefs.SetInt("MejorMinuto00Save", actMinutos);
+        PlayerPrefs.SetInt("MejorSegundo00Save", actSegundos);
+        PlayerPrefs.SetFloat("MejorMilesima00Save", actMilesimas);
+
+        //CargarMejorTiempo();
 
     }
     void AlmacenarMejorTiempo()
     {
-        mejorMinuto = LapTimeManager.ContaMinutos;
-        mejorSegundo = LapTimeManager.ContaSegundos;
-        mejorMilesima = LapTimeManager.ContaMilesimas;
+        mejorMinuto = actMinutos;
+        mejorSegundo = actSegundos;
+        mejorMilesima = actMilesimas;
 
         PlayerPrefs.SetInt("MejorMinuto00Save", mejorMinuto);
         PlayerPrefs.SetInt("MejorSegundo00Save", mejorSegundo);
@@ -140,26 +142,12 @@ public class VueltaCompleta : MonoBehaviour
         mejorSegundo = PlayerPrefs.GetInt("MejorSegundo00Save");
         mejorMilesima = PlayerPrefs.GetFloat("MejorMilesima00Save");
 
-        if (mejorSegundo <= 9)
-        {
-            SegundosBest.GetComponent<Text>().text = "0" + mejorSegundo + ".";
-        }
-        else
-        {
-            SegundosBest.GetComponent<Text>().text = "" + mejorSegundo + ".";
-        }
 
-        if (mejorMinuto <= 9)
-        {
-            MinutosBest.GetComponent<Text>().text = "0" + mejorMinuto + ":";
-
-        }
-        else
-        {
-            MinutosBest.GetComponent<Text>().text = "" + mejorMinuto + ":";
-        }
-        MilesimasBest.GetComponent<Text>().text = "" + mejorMilesima.ToString("F0");
-
+        MilesimasBest.GetComponent<Text>().text = mejorMilesima.ToString("F0");
+        SegundosBest.GetComponent<Text>().text = mejorSegundo.ToString("00") + ".";
+        MinutosBest.GetComponent<Text>().text =  mejorMinuto.ToString("00") + ":";
+        
+        Debug.Log("Cargar Mejor tiempo Ingame -- " + mejorMinuto + ":" + mejorSegundo + "." + mejorMilesima);
     }
 
    
