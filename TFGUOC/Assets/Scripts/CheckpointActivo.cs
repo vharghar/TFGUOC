@@ -57,19 +57,19 @@ public class CheckpointActivo : MonoBehaviour
         switch (nombreCheckpoint)
         {
             case "RampaCP":
-                consejo = "Prueva 1 Rampa:\n Colocarse en la base y subir a una velocidad constante, no parar ni frenar a media subida";
+                consejo = "Prueba 1 Rampa:\n Colocarse en la base y subir a una velocidad constante, no parar ni frenar a media subida.";
                 break;
             case "ZigzagCP":
-                consejo = "Prueva 2 Zigzag:\n Procuran mantenerse en el centro del paso, controlar la inclinacion del vehiculo para evitar volcar";
+                consejo = "Prueba 2 Zigzag:\n Procuran mantenerse en el centro del paso, controlar la inclinación del vehículo para evitar volcar.";
                 break;
             case "BachesCP":
-                consejo = "Prueva 3 Baches: \n Mantener una velocidad constante reducida, intentar mantener las ruedas en contacto con el suelo, en caso de atasco retroceder y volver a avanzar";
+                consejo = "Prueba 3 Baches: \n Mantener una velocidad constante reducida, intentar mantener las ruedas en contacto con el suelo, en caso de atasco retroceder y volver a avanzar.";
                 break;
             case "EscalerasCP":
-                consejo = "Prueva 4 Escaleras: \n Reducir la velocidad y avanzar con decision, evitando la perpendicular con la escalera, recomendable afrontar la escalera un poco de lado de forma que cada rueda contacte con un escalon diferente";
+                consejo = "Prueba 4 Escaleras: \n Reducir la velocidad y avanzar con decisión, evitando la perpendicular con la escalera, recomendable afrontar la escalera un poco de lado de forma que cada rueda contacte con un escalón diferente.";
                 break;
             case "GrietasCP":
-                consejo = "Prueva 5 Grietas: \n Velocidad reducida, afrontar las grietas en diagonal para evitar que las dos ruedas entren a la vez en la grieta";
+                consejo = "Prueba 5 Grietas: \n Velocidad reducida, afrontar las grietas en diagonal para evitar que las dos ruedas entren a la vez en la grieta.";
                 break;
                 //  default:
                 //    numeroCP = 0;
