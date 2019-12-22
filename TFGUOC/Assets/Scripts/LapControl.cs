@@ -7,15 +7,7 @@ public class LapControl : MonoBehaviour
     public GameObject VueltaCompletaTrig;
     public GameObject CP_1;
     // Start is called before the first frame update
-    void Start()
-    {
-      }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     void OnTriggerEnter()
     {
        

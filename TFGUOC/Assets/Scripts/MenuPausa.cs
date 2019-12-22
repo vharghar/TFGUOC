@@ -13,9 +13,11 @@ public class MenuPausa : MonoBehaviour
     public GameObject optionsUI;
     public GameObject audioUI;
     public GameObject graficsUI;
+    public GameObject controlUI;
     public GameObject exitUI;
     public GameObject camara;
     public GameObject player;
+    public GameObject fondo;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,8 +53,9 @@ public class MenuPausa : MonoBehaviour
         audioUI.SetActive(false);
         graficsUI.SetActive(false);
         exitUI.SetActive(false);
+        controlUI.SetActive(false);
         menuPausaUI.SetActive(true);
-        
+        fondo.SetActive(true);
         
         
     }
@@ -62,7 +65,9 @@ public class MenuPausa : MonoBehaviour
         optionsUI.SetActive(false);
         audioUI.SetActive(false);
         graficsUI.SetActive(false);
+        controlUI.SetActive(false);
         exitUI.SetActive(false);
+        fondo.SetActive(false);
         Time.timeScale = 1f;
         JuegoEnPausa = false;
         //player.SetActive (true);
@@ -72,6 +77,7 @@ public class MenuPausa : MonoBehaviour
     void Pausa()
     {
         menuPausaUI.SetActive(true);
+        fondo.SetActive(true);
         Time.timeScale = 0f;
         JuegoEnPausa = true;
         //player.SetActive(false);

@@ -8,6 +8,7 @@ public class CheckpointActivo : MonoBehaviour
     public bool activado = false;
     public bool siguiente = false;
     public static GameObject[] ListaPuntosControl;
+    public GameObject[] ListaCP;
     public static int PuntoActivo = 0;
     public Material activo_tex;
     public Material noActivo_tex;
@@ -21,7 +22,8 @@ public class CheckpointActivo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ListaPuntosControl = GameObject.FindGameObjectsWithTag("PuntoDeControl");
+        //ListaPuntosControl = GameObject.FindGameObjectsWithTag("PuntoDeControl");
+        ListaPuntosControl = ListaCP;
     }
 
     // Update is called once per frame
@@ -44,7 +46,7 @@ public class CheckpointActivo : MonoBehaviour
          //   Debug.Log(other.tag);
 
         }
-       // Debug.Log(this.GetComponent<CheckpointActivo>().name + " -- " + PuntoActivo);
+        Debug.Log(this.GetComponent<CheckpointActivo>().name + " -- " + PuntoActivo);
     }
 
     void MostrarConsejos(string nombreCheckpoint)

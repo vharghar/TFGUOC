@@ -36,16 +36,18 @@ public class RestaurarCoche : MonoBehaviour
         
 
        // float tempX = puntosDeControl[controlActivo].rotation.x;
-        float tempY = puntosDeControl[controlActivo].rotation.y;
+        //float tempY = puntosDeControl[controlActivo].rotation.y;
         // float tempZ = puntosDeControl[controlActivo].rotation.z;
         // Now we reset the car!
         float posX = puntosDeControl[controlActivo].position.x;
         float posY = puntosDeControl[controlActivo].position.y + alturaSeguridad;
         float posZ = puntosDeControl[controlActivo].position.z;
+        // posicionamos el coche en el punto de respawn
         transform.position = new Vector3(posX, posY , posZ);
         //transform.localRotation = Quaternion.Euler(0, puntosDeControl[controlActivo].localRotation.y, 0);
         transform.localRotation = puntosDeControl[controlActivo].localRotation;
         coche.velocity = Vector3.zero;
+        //restauramos el coche
         VehiclePhysics.VPResetVehicle.ResetVehicle(vpcoche, alturaSeguridad);
 
         //transform.localRotation = puntosDeControl[controlActivo].localRotation;

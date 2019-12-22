@@ -119,12 +119,6 @@
      <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\TextureArrayEditor.cs" />
      <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\TextureArrayPreprocessor.cs" />
      <Compile Include="Assets\Externos\MicroSplat\Core\Scripts\VegetationStudio\Editor\MicroSplatVegetationStudio.cs" />
-     <Compile Include="Assets\Externos\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-     <Compile Include="Assets\Externos\Standard Assets\Editor\Water\Water4\GerstnerDisplaceEditor.cs" />
-     <Compile Include="Assets\Externos\Standard Assets\Editor\Water\Water4\PlanarReflectionEditor.cs" />
-     <Compile Include="Assets\Externos\Standard Assets\Editor\Water\Water4\SpecularLightingEditor.cs" />
-     <Compile Include="Assets\Externos\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
-     <Compile Include="Assets\Externos\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
      <Compile Include="Assets\Externos\Vehicle Physics Pro\Scenes\UI\Editor\GaugeInspector.cs" />
      <None Include="Assets\Externos\MicroSplat\Core\Scripts\VegetationStudio\Editor\microsplat_func_vsgrassmap.txt" />
      <None Include="Assets\Externos\MicroSplat\Core\Scripts\Editor\Fragments\microsplat_terrain_body.txt" />
@@ -774,9 +768,17 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{1205B7C5-F84F-3DA3-95AE-C2756BFB0433}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{3B96523D-973D-267D-AD76-8E15A459CFA4}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{6FC64BBB-4E25-C6AB-B53B-994D66F84007}</Project>
+      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class MostrarControles : MonoBehaviour
 {
     public KeyCode teclaDeControles;
+    public KeyCode teclaConsejos;
     public KeyCode teclaFPS;
     public GameObject CntrolText;
     public GameObject fpsText;
+    public GameObject panelConsejos;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,12 @@ public class MostrarControles : MonoBehaviour
         {
             MostrarFPS();
         }
+
+        if (Input.GetKeyDown(teclaConsejos))
+
+        {
+            MostrarConsejos();
+        }
     }
     void Mostrar()
     {
@@ -47,7 +55,7 @@ public class MostrarControles : MonoBehaviour
 
     void MostrarFPS()
     {
-        if (fpsText.active)
+        if (fpsText.activeInHierarchy)
         {
             fpsText.SetActive(false);
         }
@@ -55,5 +63,19 @@ public class MostrarControles : MonoBehaviour
         {
             fpsText.SetActive(true);
         }
+    }
+
+    void MostrarConsejos()
+    {
+        
+            if (panelConsejos.activeInHierarchy)
+            {
+                panelConsejos.SetActive(false);
+            }
+            else
+            {
+                panelConsejos.SetActive(true);
+            }
+        
     }
 }
