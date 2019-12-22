@@ -11,7 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 22e92fe11a6303b42907f79b79ddf61f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game2.unity
     guid: 86728534f9260f34ba946b6907907ebf
+  - enabled: 1
+    path: Assets/Scenes/Circuito.unity
+    guid: fc4856e3b8e0c8442a20742f94ddb2b2
+  - enabled: 1
+    path: Assets/Scenes/Pistalibre.unity
+    guid: 1d1ad3c1e1c1e5c4d9031e71435028eb
   m_configObjects: {}
