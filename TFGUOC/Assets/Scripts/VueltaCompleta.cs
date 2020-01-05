@@ -23,13 +23,20 @@ public class VueltaCompleta : MonoBehaviour
     public int mejorSegundo;
     public float mejorMilesima;
 
+    public string mMinSave;
+    public string mSecSave;
+    public string mMilSave;
+
     // Start is called before the first frame update
     void Start()
     {
-       // CargarMejorTiempo();
+        // CargarMejorTiempo();
+
+        mMinSave = "MejorMinuto00Save";
+        mSecSave = "MejorSegundo00Save";
+        mMilSave = "MejorMilesima00Save";
 
 
-       
     }
 
     // Update is called once per frame
@@ -39,9 +46,12 @@ public class VueltaCompleta : MonoBehaviour
     }
     void OnTriggerEnter()
     {
-        mejorMinuto = PlayerPrefs.GetInt("MejorMinuto00Save");
-        mejorSegundo = PlayerPrefs.GetInt("MejorSegundo00Save");
-        mejorMilesima = PlayerPrefs.GetFloat("MejorMilesima00Save");
+
+
+
+     mejorMinuto = PlayerPrefs.GetInt(mMinSave);
+     mejorSegundo = PlayerPrefs.GetInt(mSecSave);
+     mejorMilesima = PlayerPrefs.GetFloat(mMilSave);
 
         actMinutos = LapTimeManager.ContaMinutos;
         actSegundos = LapTimeManager.ContaSegundos;
@@ -82,6 +92,14 @@ public class VueltaCompleta : MonoBehaviour
                                 Debug.Log("milesima -- " + actMinutos + ":" + actSegundos + "." + actMilesimas);
                                 ActualizarTextos();
                             }
+                            else
+                            {
+                                ComprobarOtrosTiempos(actMinutos, actSegundos, actMilesimas);
+                            }
+                        }
+                        else
+                        {
+                            ComprobarOtrosTiempos(actMinutos, actSegundos, actMilesimas);
                         }
                     }
                 }
@@ -102,18 +120,20 @@ public class VueltaCompleta : MonoBehaviour
         MilesimasBest.GetComponent<Text>().text = actMilesimas.ToString("F0"); 
         SegundosBest.GetComponent<Text>().text = actSegundos.ToString("00") + ".";
         MinutosBest.GetComponent<Text>().text = actMinutos.ToString("00") + ":";
-       
-       
-        // AlmacenarMejorTiempo();
-      /*
-        mejorMinuto = actMinutos;
-        mejorSegundo = actSegundos;
-        mejorMilesima = actMilesimas;
-*/
-        PlayerPrefs.SetInt("MejorMinuto00Save", actMinutos);
-        PlayerPrefs.SetInt("MejorSegundo00Save", actSegundos);
-        PlayerPrefs.SetFloat("MejorMilesima00Save", actMilesimas);
 
+
+        // AlmacenarMejorTiempo();
+        /*
+          mejorMinuto = actMinutos;
+          mejorSegundo = actSegundos;
+          mejorMilesima = actMilesimas;
+
+          PlayerPrefs.SetInt(mMinSave, actMinutos);
+          PlayerPrefs.SetInt(mSecSave, actSegundos);
+          PlayerPrefs.SetFloat(mMilSave, actMilesimas);
+
+      */
+        ComprobarOtrosTiempos(actMinutos, actSegundos, actMilesimas);
         //CargarMejorTiempo();
 
     }
@@ -123,9 +143,9 @@ public class VueltaCompleta : MonoBehaviour
         mejorSegundo = actSegundos;
         mejorMilesima = actMilesimas;
 
-        PlayerPrefs.SetInt("MejorMinuto00Save", mejorMinuto);
-        PlayerPrefs.SetInt("MejorSegundo00Save", mejorSegundo);
-        PlayerPrefs.SetFloat("MejorMilesima00Save", mejorMilesima);
+        PlayerPrefs.SetInt(mMinSave, mejorMinuto);
+        PlayerPrefs.SetInt(mSecSave, mejorSegundo);
+        PlayerPrefs.SetFloat(mMilSave, mejorMilesima);
     }
     void ReiniciarReloj()
     {
@@ -138,9 +158,9 @@ public class VueltaCompleta : MonoBehaviour
 
     void CargarMejorTiempo()
     {
-        mejorMinuto = PlayerPrefs.GetInt("MejorMinuto00Save");
-        mejorSegundo = PlayerPrefs.GetInt("MejorSegundo00Save");
-        mejorMilesima = PlayerPrefs.GetFloat("MejorMilesima00Save");
+        mejorMinuto = PlayerPrefs.GetInt(mMinSave);
+        mejorSegundo = PlayerPrefs.GetInt(mSecSave);
+        mejorMilesima = PlayerPrefs.GetFloat(mMilSave);
 
 
         MilesimasBest.GetComponent<Text>().text = mejorMilesima.ToString("F0");
@@ -151,6 +171,153 @@ public class VueltaCompleta : MonoBehaviour
     }
 
    
+    void ComprobarOtrosTiempos(int minut, int secon, float milesi)
+    {
+        string mMS;
+        string mSS;
+        string mMlS;
+        int posicionAlmacenado = 5;
+        int minAlmacenado;
+        int secAlmacenado;
+        float milAlmacenado;
 
+        for (int i = 0; i < 4; i += 1)
+        {
+            mMS = "MejorMinuto0" + i + "Save";
+            mSS = "MejorSegundo0" + i + "Save";
+            mMlS = "MejorMilesima0" + i + "Save";
+
+            minAlmacenado = PlayerPrefs.GetInt(mMS);
+            secAlmacenado = PlayerPrefs.GetInt(mSS);
+            milAlmacenado = PlayerPrefs.GetFloat(mMlS);
+
+            if (minAlmacenado == 0 && secAlmacenado == 0 && milAlmacenado == 0f)
+            {
+
+                posicionAlmacenado = i;
+                break;
+            }
+            else
+            {
+                if (minut < minAlmacenado)
+                {
+
+                    posicionAlmacenado = i;
+                    break;
+                }
+                else
+                {
+                    if (minut == minAlmacenado)
+                    {
+                        if (secon < secAlmacenado)
+                        {
+
+                            posicionAlmacenado = i;
+                            break;
+                        }
+                        else
+                        {
+                            if (secon == secAlmacenado)
+                            {
+                                if (milesi < milAlmacenado)
+                                {
+
+                                    posicionAlmacenado = i;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+            if (posicionAlmacenado != 5)
+            {
+                ActualizarRegistros(posicionAlmacenado, minut, secon, milesi);
+            }
+    }
+
+    void ActualizarRegistros(int posicion, int minut, int secon, float milesi)
+    {
+        string mMS = "MejorMinuto0" + posicion + "Save";
+        string mSS = "MejorSegundo0" + posicion + "Save";
+        string mMlS = "MejorMilesima0" + posicion + "Save";
+        string mMSPrevio ;
+        string mSSPrevio ;
+        string mMlSPrevio;
+            string mMSNuevo;
+            string mSSNuevo;
+            string mMlSNuevo;
+            int minutoNuevo;
+            int segundoNuevo;
+            float milesimaNuevo;
+            int minutoViejo;
+            int segundoViejo;
+            float milesimaViejo;
+
+
+            if (posicion == 3)
+            {
+                PlayerPrefs.SetInt(mMS, minut);
+                PlayerPrefs.SetInt(mSS, secon);
+                PlayerPrefs.SetFloat(mMlS, milesi);
+
+            }
+            else
+            {
+                for (int i=3; i>posicion; i -= 1)
+                {
+                    if (posicion == i - 1)
+                    {
+                        mMSPrevio = "MejorMinuto0" + posicion + "Save";
+                        mSSPrevio = "MejorSegundo0" + posicion + "Save";
+                        mMlSPrevio = "MejorMilesima0" + posicion + "Save";
+
+                        mMSNuevo = "MejorMinuto0" + i + "Save";
+                        mSSNuevo = "MejorSegundo0" + i + "Save";
+                        mMlSNuevo = "MejorMilesima0" + i + "Save";
+
+                        minutoNuevo = PlayerPrefs.GetInt(mMSPrevio);
+                        segundoNuevo = PlayerPrefs.GetInt(mSSPrevio);
+                        milesimaNuevo = PlayerPrefs.GetFloat(mMlSPrevio); ;
+                                         
+                        PlayerPrefs.SetInt(mMSNuevo, minutoNuevo);
+                        PlayerPrefs.SetInt(mSSNuevo, segundoNuevo);
+                        PlayerPrefs.SetFloat(mMlSNuevo, milesimaNuevo);
+
+                        PlayerPrefs.SetInt(mMSPrevio, minut);
+                        PlayerPrefs.SetInt(mSSPrevio, secon);
+                        PlayerPrefs.SetFloat(mMlSPrevio, milesi);
+
+                    }
+                    else
+                    {
+                        mMSPrevio = "MejorMinuto0" + (i-1) + "Save";
+                        mSSPrevio = "MejorSegundo0" + (i-1) + "Save";
+                        mMlSPrevio = "MejorMilesima0" + (i-1) + "Save";
+
+                        mMSNuevo = "MejorMinuto0" + i + "Save";
+                        mSSNuevo = "MejorSegundo0" + i + "Save";
+                        mMlSNuevo = "MejorMilesima0" + i + "Save";
+
+                        minutoViejo = PlayerPrefs.GetInt(mMSPrevio); ;
+                        segundoViejo = PlayerPrefs.GetInt(mSSPrevio); ;
+                        milesimaViejo = PlayerPrefs.GetFloat(mMlSPrevio);
+
+                        PlayerPrefs.SetInt(mMSNuevo, minutoViejo);
+                        PlayerPrefs.SetInt(mSSNuevo, segundoViejo);
+                        PlayerPrefs.SetFloat(mMlSNuevo, milesimaViejo);
+
+                    
+                    }
+                }
+            }
+
+      
+
+    }
     
 }

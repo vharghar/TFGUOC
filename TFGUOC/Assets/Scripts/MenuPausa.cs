@@ -14,6 +14,7 @@ public class MenuPausa : MonoBehaviour
     public GameObject audioUI;
     public GameObject graficsUI;
     public GameObject controlUI;
+    public GameObject statsUI;
     public GameObject exitUI;
     public GameObject camara;
     public GameObject player;
@@ -54,9 +55,10 @@ public class MenuPausa : MonoBehaviour
         graficsUI.SetActive(false);
         exitUI.SetActive(false);
         controlUI.SetActive(false);
+        statsUI.SetActive(false);
         menuPausaUI.SetActive(true);
         fondo.SetActive(true);
-        
+        Cursor.visible = true;
         
     }
     public void Continuar()
@@ -67,7 +69,9 @@ public class MenuPausa : MonoBehaviour
         graficsUI.SetActive(false);
         controlUI.SetActive(false);
         exitUI.SetActive(false);
+        statsUI.SetActive(false);
         fondo.SetActive(false);
+        Cursor.visible = false;
         Time.timeScale = 1f;
         JuegoEnPausa = false;
         //player.SetActive (true);
@@ -80,6 +84,7 @@ public class MenuPausa : MonoBehaviour
         fondo.SetActive(true);
         Time.timeScale = 0f;
         JuegoEnPausa = true;
+        Cursor.visible = true;
         //player.SetActive(false);
     }
 
